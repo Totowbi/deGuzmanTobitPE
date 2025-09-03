@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String code, gender;
+        int tf;
+
+        System.out.println("==============================================================");
+            System.out.println(" Greetings");
+        System.out.println("\tBy");
+        System.out.println("Tobit de Guzman");
+        System.out.println("==============================================================");
+
+        System.out.print("Enter Code (CS/IT): ");
+        code = in.nextLine();
+
+        System.out.print("Enter Gender (F/M): ");
+        gender = in.nextLine();
+
+        System.out.print("Enter Timeframe (1/2/3): ");
+        tf = in.nextInt();
+         System.out.println("==============================================================");
+
+     
+        if (tf == 1) {
+            System.out.println("Good Morning");
+        } else if (tf == 2) {
+            System.out.println("Lively Afternoon");
+        } else if (tf == 3) {
+            System.out.println("Wonderful Evening");
+        }
+
+        if (gender.equals("F")) {
+            System.out.print("Ms. ");
+        } else if (gender.equals("M")) {
+            System.out.print("Mr. ");
+        }
+
+        if (code.equals("CS")) {
+            System.out.println("CompSci");
+             System.out.println("==============================================================");
+        } else if (code.equals("IT")) {
+            System.out.println("InforTech");
+             System.out.println("==============================================================");
+        }
+
+       
+    }
+}
