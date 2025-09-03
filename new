@@ -1,1 +1,59 @@
-import java.util.Scanner; public class MenuProgram { public static void main(String[] args) { Scanner sc = new Scanner(System.in); // Display header System.out.println("==============================================================================="); System.out.println("This program is created by De Guzman, Nathaniel Don Joseph I."); System.out.println(); System.out.println("Option Menu"); System.out.println("[1] Display a message about the weather today"); System.out.println("[2] Compute for the arithmetic value of two inputted values"); System.out.println("[3] Identification if an inputted number is an Even or Odd number"); System.out.println("[4] Exit"); System.out.println(); System.out.print(" Enter your choice : "); int choice = sc.nextInt(); switch (choice) { case 1: System.out.println("Today's weather is sunny with a chance of rain later!"); break; case 2: System.out.print("Enter first number: "); int num1 = sc.nextInt(); System.out.print("Enter second number: "); int num2 = sc.nextInt(); int sum = num1 + num2; System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum); break; case 3: System.out.print("Enter a number: "); int number = sc.nextInt(); if (number % 2 == 0) { System.out.println(number + " is an Even number."); } else { System.out.println(number + " is an Odd number."); } break; case 4: System.out.println("Exiting program... Goodbye!"); break; default: System.out.println("Invalid choice! Please try again."); } System.out.println("==============================================================================="); sc.close(); } }
+import java.util.Scanner;
+
+public class MenuProgram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Display header
+        System.out.println("===============================================================================");
+        System.out.println("This program is created by De Guzman, Nathaniel Don Joseph I.");
+        System.out.println();
+        System.out.println("Option Menu");
+        System.out.println("[1] Display a message about the weather today");
+        System.out.println("[2] Compute for the arithmetic value of two inputted values");
+        System.out.println("[3] Identification if an inputted number is an Even or Odd number");
+        System.out.println("[4] Exit");
+        System.out.println();
+
+        System.out.print("Enter your choice : ");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println("Today's weather is sunny with a chance of rain later!");
+                break;
+
+            case 2:
+                System.out.print("Enter first number: ");
+                int num1 = sc.nextInt();
+
+                System.out.print("Enter second number: ");
+                int num2 = sc.nextInt();
+
+                int sum = num1 + num2;
+                System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum);
+                break;
+
+            case 3:
+                System.out.print("Enter a number: ");
+                int number = sc.nextInt();
+
+                if (number % 2 == 0) {
+                    System.out.println(number + " is an Even number.");
+                } else {
+                    System.out.println(number + " is an Odd number.");
+                }
+                break;
+
+            case 4:
+                System.out.println("Exiting program... Goodbye!");
+                break;
+
+            default:
+                System.out.println("Invalid choice! Please try again.");
+        }
+
+        System.out.println("===============================================================================");
+        sc.close();
+    }
+}
