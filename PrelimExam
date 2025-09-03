@@ -6,11 +6,11 @@ class Main {
         String code, gender;
         int tf;
 
-        System.out.println("==============================================================");
-            System.out.println(" Greetings");
-        System.out.println("\tBy");
-        System.out.println("Tobit de Guzman");
-        System.out.println("==============================================================");
+        System.out.println("==============================================");
+            System.out.println("\t\t\t\t Greetings");
+        System.out.println("\t\t\t\t    By");
+        System.out.println("\t\t\t  Tobit de Guzman");
+       System.out.println("==============================================");
 
         System.out.print("Enter Code (CS/IT): ");
         code = in.nextLine();
@@ -20,7 +20,7 @@ class Main {
 
         System.out.print("Enter Timeframe (1/2/3): ");
         tf = in.nextInt();
-         System.out.println("==============================================================");
+        System.out.println("==============================================");
 
      
         if (tf == 1) {
@@ -39,10 +39,10 @@ class Main {
 
         if (code.equals("CS")) {
             System.out.println("CompSci");
-             System.out.println("==============================================================");
+             System.out.println("==============================================");
         } else if (code.equals("IT")) {
             System.out.println("InforTech");
-             System.out.println("==============================================================");
+            System.out.println("==============================================");
         }
 
        
