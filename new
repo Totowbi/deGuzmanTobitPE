@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class MenuProgram {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-        // Display header
         System.out.println("===============================================================================");
-        System.out.println("This program is created by De Guzman, Nathaniel Don Joseph I.");
+        System.out.println("This program is created by Mr. de Guzmanm Tobit B.");
+        System.out.println("===============================================================================");
         System.out.println();
         System.out.println("Option Menu");
         System.out.println("[1] Display a message about the weather today");
@@ -16,32 +16,58 @@ public class MenuProgram {
         System.out.println();
 
         System.out.print("Enter your choice : ");
-        int choice = sc.nextInt();
+        int choice = in.nextInt();
 
         switch (choice) {
             case 1:
-                System.out.println("Today's weather is sunny with a chance of rain later!");
+                System.out.println("For Todays weather, it is stormy!");
                 break;
 
             case 2:
                 System.out.print("Enter first number: ");
-                int num1 = sc.nextInt();
+                int num1 = in.nextInt();
 
                 System.out.print("Enter second number: ");
-                int num2 = sc.nextInt();
+                int num2 = in.nextInt();
 
-                int sum = num1 + num2;
-                System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum);
+                System.out.println("Choose operation: ");
+                System.out.println("[1] Addition");
+                System.out.println("[2] Subtraction");
+                System.out.println("[3] Multiplication");
+                System.out.println("[4] Division");
+                System.out.print("Enter your choice: ");
+                int op = in.nextInt();
+
+                switch (op) {
+                    case 1:
+                        System.out.println("The sum is: " + (num1 + num2));
+                        break;
+                    case 2:
+                        System.out.println("The difference is: " + (num1 - num2));
+                        break;
+                    case 3:
+                        System.out.println("The product is: " + (num1 * num2));
+                        break;
+                    case 4:
+                        if (num2 != 0) {
+                            System.out.println("The quotient is: " + (num1 / num2));
+                        } else {
+                            System.out.println("Error: Division by zero is not allowed.");
+                        }
+                        break;
+                    default:
+                        System.out.println("Invalid operation choice!");
+                }
                 break;
 
             case 3:
                 System.out.print("Enter a number: ");
-                int number = sc.nextInt();
+                int number = in.nextInt();
 
                 if (number % 2 == 0) {
-                    System.out.println(number + " is an Even number.");
+                    System.out.println(number + " is Even.");
                 } else {
-                    System.out.println(number + " is an Odd number.");
+                    System.out.println(number + " is Odd.");
                 }
                 break;
 
@@ -54,6 +80,6 @@ public class MenuProgram {
         }
 
         System.out.println("===============================================================================");
-        sc.close();
+        in.close();
     }
 }
