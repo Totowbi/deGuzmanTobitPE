@@ -75,8 +75,10 @@ public class MidTermsAsynch {
     int verify2 = verify1 * 2;
 
     if (verify2 == number) {
+     System.out.println("===============================================================================");
         System.out.println(number + " is Even.");
     } else {
+ System.out.println("===============================================================================");
         System.out.println(number + " is Odd.");
     }
     break;
